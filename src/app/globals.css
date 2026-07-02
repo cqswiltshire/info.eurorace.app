@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background:            hsl(var(--background));
+  --color-foreground:            hsl(var(--foreground));
+  --color-card:                  hsl(var(--card));
+  --color-card-foreground:       hsl(var(--card-foreground));
+  --color-popover:               hsl(var(--popover));
+  --color-popover-foreground:    hsl(var(--popover-foreground));
+  --color-primary:               hsl(var(--primary));
+  --color-primary-foreground:    hsl(var(--primary-foreground));
+  --color-secondary:             hsl(var(--secondary));
+  --color-secondary-foreground:  hsl(var(--secondary-foreground));
+  --color-muted:                 hsl(var(--muted));
+  --color-muted-foreground:      hsl(var(--muted-foreground));
+  --color-accent:                hsl(var(--accent));
+  --color-accent-foreground:     hsl(var(--accent-foreground));
+  --color-destructive:           hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-border:                hsl(var(--border));
+  --color-input:                 hsl(var(--input));
+  --color-ring:                  hsl(var(--ring));
+}
+
+:root {
+  /* Brand Colors (Light Blue Theme) */
+  --background: 204 91% 94%;
+  --foreground: 224 71% 4%;
+  --border: 204 91% 88%;
+  --primary: 217 89% 61%;
+  --primary-foreground: 0 0% 100%;
+  --ring: 217 89% 61%;
+
+  /* Card & Popover - solid white */
+  --card: 0 0% 100%;
+  --card-foreground: 224 71% 4%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 224 71% 4%;
+
+  /* Muted / Secondary - pale blue-grey tones */
+  --muted: 210 40% 90%;
+  --muted-foreground: 215 20% 46%;
+  --secondary: 210 40% 92%;
+  --secondary-foreground: 224 47% 11%;
+
+  /* Accent - used for hover states in dropdowns/menus */
+  --accent: 210 40% 90%;
+  --accent-foreground: 224 47% 11%;
+
+  /* Destructive */
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+
+  /* Input border - same as --border */
+  --input: 204 91% 88%;
+
+  /* Typography & Layout */
+  --font-body: "PT Sans", sans-serif;
+}
+
+@layer base {
+  * { 
+    border-color: hsl(var(--border)); 
+  }
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  body { 
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+}
