@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { Trophy, Sparkles, ShieldCheck } from "lucide-react";
 
 export default function Home() {
   const [installOS, setInstallOS] = useState<"ios" | "android" | null>(null);
@@ -36,12 +35,12 @@ export default function Home() {
         <div className="flex flex-col items-center gap-6 pt-4">
           <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4">
             <a
-              href="https://eurorace.app"
+              href="https://eurorace.app/login"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto px-8 py-4 bg-card text-card-foreground border-2 border-border font-bold text-lg rounded-xl shadow-sm hover:bg-accent hover:border-primary/50 transition-all active:scale-95"
             >
-              Launch Web App
+              Enter Race Hub
             </a>
             <button
               onClick={() => setInstallOS("ios")}
@@ -79,22 +78,21 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Feature Teasers */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-12 text-left">
-          <div className="p-6 rounded-2xl bg-card border shadow-sm flex flex-col gap-3">
-            <Trophy className="w-8 h-8 text-primary" />
-            <h3 className="text-lg font-bold text-foreground">Live Race Hub & Dynamic Standings</h3>
-            <p className="text-muted-foreground text-sm leading-relaxed">Turn your journey into a high-stakes competition. Gather your friends, sync your public transport logs, and track overall leaderboards in real time. Teams plot their own open paths across Europe, battling to clear checkpoints fastest and cheapest while unlocking rival data only when a leg is completed by all to maintain the competitive "Fog of War".</p>
-          </div>
-          <div className="p-6 rounded-2xl bg-card border shadow-sm flex flex-col gap-3">
-            <Sparkles className="w-8 h-8 text-primary" />
-            <h3 className="text-lg font-bold text-foreground">Autonomous AI Judging</h3>
-            <p className="text-muted-foreground text-sm leading-relaxed">Completely eliminate biased arguments over who captured the best day. Our built-in AI judging engine aggregates global constraints, custom trip themes, and team captions to score creative daily photo submissions out of 10. Organisers get instant, balanced point distribution and written critiques saved automatically to the live dashboard.</p>
-          </div>
-          <div className="p-6 rounded-2xl bg-card border shadow-sm flex flex-col gap-3">
-            <ShieldCheck className="w-8 h-8 text-primary" />
-            <h3 className="text-lg font-bold text-foreground">100% Free & Ad-Free</h3>
-            <p className="text-muted-foreground text-sm leading-relaxed">We believe a competitive adventure shouldn't be interrupted by banner ads or strict countdown timers. Enjoy a generous free tier that gives your teams access to every single feature—including AI receipt scanning, live tracking, and offline logging—completely uninhibited. Upgrading to a premium license simply unlocks unlimited uploads once your trip crosses standard fair-use quota limits.</p>
+        {/* Core Concept */}
+        <div className="pt-16 max-w-3xl mx-auto text-left">
+          <div className="p-8 rounded-3xl bg-card border shadow-md space-y-6">
+            <h2 className="text-3xl font-extrabold text-foreground">The Ultimate Trans-European Adventure—Without the Overhead</h2>
+            <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
+              <p>
+                Organising a multi-day race across the continent shouldn't require a spreadsheet degree. We believe the thrill of the adventure lives in the split-second decisions at train stations, the tight budget maneuvering, and the unscripted chaos of the open road.
+              </p>
+              <p>
+                While you and your friends retain 100% of the fun, tactics, and glory of planning your routes across Europe, EuroRace exists to completely handle the administrative drudgery.
+              </p>
+              <p>
+                From logging expenses and OCR-scanning foreign receipts, to snapping GPS tracks to the rail network and autonomously scoring your daily photo challenges, we automate the heavy lifting so you can focus purely on the race.
+              </p>
+            </div>
           </div>
         </div>
 

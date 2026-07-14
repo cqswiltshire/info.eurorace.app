@@ -10,7 +10,7 @@ export default function DocsPage() {
   return (
     <main className="min-h-screen bg-background text-foreground py-16 px-6 sm:px-12">
       <div className="max-w-4xl mx-auto space-y-16 animate-in fade-in zoom-in duration-700">
-        
+
         {/* Header */}
         <div className="space-y-4 border-b border-border pb-8">
           <Link href="/" className="text-primary hover:underline font-semibold flex items-center gap-2">
@@ -39,20 +39,32 @@ export default function DocsPage() {
 
         {/* Feature Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          
-          {/* Box 1 */}
+
+          {/* Box 1 - Live Race Hub */}
           <div className="p-8 rounded-2xl bg-card border shadow-sm space-y-3">
             <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-              <span className="text-2xl">🗺️</span>
+              <span className="text-2xl">🏆</span>
             </div>
-            <h3 className="text-xl font-bold text-foreground">Custom Route Tracking</h3>
-            <p className="font-medium text-foreground text-sm">Your race, your rules. Plot your own path between the checkpoints.</p>
+            <h3 className="text-xl font-bold text-foreground">Live Race Hub & Dynamic Standings</h3>
+            <p className="font-medium text-foreground text-sm">Turn your journey into a high-stakes competition.</p>
             <p className="text-muted-foreground text-sm leading-relaxed pt-2">
-              There is no fixed track here. Once the starting grid clears, it's up to your team to navigate the open public transport network. Log your journeys on the go, and watch your custom route dynamically snap to high-fidelity European rail and road networks.
+              Gather your friends, sync your public transport logs, and track overall leaderboards in real time. Teams plot their own open paths across Europe, battling to clear checkpoints fastest and cheapest while unlocking rival data only when a leg is completed by all to maintain the competitive "Fog of War".
             </p>
           </div>
 
-          {/* Box 2 */}
+          {/* Box 2 - Fog of War */}
+          <div className="p-8 rounded-2xl bg-card border shadow-sm space-y-3">
+            <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+              <span className="text-2xl">🌫️</span>
+            </div>
+            <h3 className="text-xl font-bold text-foreground">Competitive Fog of War</h3>
+            <p className="font-medium text-foreground text-sm">Keep your transit strategies and hidden costs completely secret.</p>
+            <p className="text-muted-foreground text-sm leading-relaxed pt-2">
+              To maintain absolute suspense, your team's logged routes, checkpoints, creative photos, and financial spending are entirely invisible to your friends. Gated data only unmasks itself to reveal rival paths on the leaderboard once every active participatory team safely crosses the final checkpoint of that leg.
+            </p>
+          </div>
+
+          {/* Box 3 - Expense Logging */}
           <div className="p-8 rounded-2xl bg-card border shadow-sm space-y-3">
             <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
               <span className="text-2xl">💸</span>
@@ -64,7 +76,7 @@ export default function DocsPage() {
             </p>
           </div>
 
-          {/* Box 3 */}
+          {/* Box 4 - Photo Challenges (AI) */}
           <div className="p-8 rounded-2xl bg-card border shadow-sm space-y-3">
             <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
               <span className="text-2xl">📸</span>
@@ -72,19 +84,31 @@ export default function DocsPage() {
             <h3 className="text-xl font-bold text-foreground">Automated AI Judging & Photo Challenges</h3>
             <p className="font-medium text-foreground text-sm">Instant, balanced scoring for your creative discoveries.</p>
             <p className="text-muted-foreground text-sm leading-relaxed pt-2">
-              Compete in daily or leg-based photo prompts designed by your organiser. Eliminate biased group arguments: our advanced AI judge evaluates team captions and imagery against the unique rules of your trip, generating a score out of 10 alongside written critiques delivered straight to the dashboard.
+              Compete in daily or leg-based photo prompts designed by your organiser, completely eliminating biased arguments over who captured the best day. Our built-in autonomous judging engine, powered by Google's Gemini 2.5 Flash model, evaluates team captions and imagery against the unique rules of your trip, generating a score out of 10 alongside written critiques delivered straight to the dashboard.
             </p>
           </div>
 
-          {/* Box 4 */}
+          {/* Box 5 - Route Tracking */}
           <div className="p-8 rounded-2xl bg-card border shadow-sm space-y-3">
             <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-              <span className="text-2xl">🌫️</span>
+              <span className="text-2xl">🗺️</span>
             </div>
-            <h3 className="text-xl font-bold text-foreground">Competitive Fog of War</h3>
-            <p className="font-medium text-foreground text-sm">Keep your transit strategies and hidden costs completely secret.</p>
+            <h3 className="text-xl font-bold text-foreground">Custom Route Tracking</h3>
+            <p className="font-medium text-foreground text-sm">Your race, your rules. Plot your own path between the checkpoints.</p>
             <p className="text-muted-foreground text-sm leading-relaxed pt-2">
-              To maintain absolute suspense, your team's logged routes, checkpoints, creative photos, and financial spending are entirely invisible to your friends. Gated data only unmasks itself to reveal rival paths on the leaderboard once every active participatory team safely crosses the final checkpoint of that leg.
+              There is no fixed track here. Once the starting grid clears, it's up to your team to navigate the open public transport network. Log your journeys on the go, and watch your custom route dynamically snap to high-fidelity European rail and road networks.
+            </p>
+          </div>
+
+          {/* Box 6 - 100% Free */}
+          <div className="p-8 rounded-2xl bg-card border shadow-sm space-y-3">
+            <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+              <span className="text-2xl">🛡️</span>
+            </div>
+            <h3 className="text-xl font-bold text-foreground">100% Free & Ad-Free</h3>
+            <p className="font-medium text-foreground text-sm">Every single feature, completely uninhibited.</p>
+            <p className="text-muted-foreground text-sm leading-relaxed pt-2">
+              We believe holidays shouldn't be interrupted by adverts. Enjoy a generous free tier that gives access to every single feature — including the AI receipt scanning, AI photo judging, AI journey logging. There is no trial period. Upgrading to a premium license simply unlocks unlimited uploads once your trip crosses our standard 10-upload fair-use quota limit.
             </p>
           </div>
 
