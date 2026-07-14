@@ -47,8 +47,8 @@ export async function POST(req: Request) {
     });
 
     const mailOptions: any = {
-      from: `"EuroRace Info Site" <${emailFrom}>`,
-      to: "support@eurorace.app",
+      from: emailFrom,
+      to: process.env.SUPPORT_EMAIL || "support@eurorace.app",
       replyTo: `"${name}" <${email}>`,
       subject: `[${category}] New message from ${name}`,
       html: `
