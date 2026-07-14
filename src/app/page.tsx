@@ -56,12 +56,20 @@ export default function Home() {
             </button>
           </div>
           
-          <Link
-            href="/docs"
-            className="w-full sm:w-auto px-8 py-4 bg-primary text-primary-foreground font-bold text-lg rounded-xl shadow-lg hover:bg-primary/90 hover:scale-105 transition-all active:scale-95"
-          >
-            Features
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mt-2">
+            <Link
+              href="/docs"
+              className="flex-1 sm:flex-none px-8 py-4 bg-primary text-primary-foreground font-bold text-lg rounded-xl shadow-lg hover:bg-primary/90 hover:scale-105 transition-all active:scale-95 text-center"
+            >
+              Features
+            </Link>
+            <Link
+              href="/changelog"
+              className="flex-1 sm:flex-none px-8 py-4 bg-secondary text-secondary-foreground font-bold text-lg rounded-xl shadow-sm hover:bg-secondary/80 hover:scale-105 transition-all active:scale-95 text-center"
+            >
+              Changelog
+            </Link>
+          </div>
         </div>
 
         {/* Feature Teasers */}
