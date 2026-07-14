@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { Trophy, Sparkles, ShieldCheck } from "lucide-react";
 
 export default function Home() {
   const [installOS, setInstallOS] = useState<"ios" | "android" | null>(null);
@@ -10,13 +11,13 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-background text-foreground flex flex-col items-center justify-center p-8 relative">
       <div className="max-w-4xl w-full text-center space-y-12 animate-in fade-in zoom-in duration-700">
-        
+
         {/* Hero Section */}
         <div className="flex flex-col items-center gap-6">
           <div className="w-40 h-40 relative rounded-3xl overflow-hidden shadow-2xl border-4 border-primary/20">
-            <Image 
-              src="/icon-512.png" 
-              alt="EuroRace App Icon" 
+            <Image
+              src="/icon-512.png"
+              alt="EuroRace App Icon"
               fill
               sizes="160px"
               className="object-cover"
@@ -27,7 +28,7 @@ export default function Home() {
             EuroRace
           </h1>
           <p className="text-xl sm:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            The ultimate cross-platform platform for managing, tracking, and scoring your European racing adventures.
+            Race your friends across the European transport network: out-plan them on the budget, out-run them to the checkpoints, and capture the unscripted stories along the way.
           </p>
         </div>
 
@@ -55,7 +56,7 @@ export default function Home() {
               🤖 Install Android
             </button>
           </div>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mt-2">
             <Link
               href="/docs"
@@ -64,38 +65,59 @@ export default function Home() {
               Features
             </Link>
             <Link
-              href="/changelog"
+              href="/guides"
               className="flex-1 sm:flex-none px-8 py-4 bg-secondary text-secondary-foreground font-bold text-lg rounded-xl shadow-sm hover:bg-secondary/80 hover:scale-105 transition-all active:scale-95 text-center"
             >
-              Changelog
+              Guides
+            </Link>
+            <Link
+              href="/faq"
+              className="flex-1 sm:flex-none px-8 py-4 bg-secondary text-secondary-foreground font-bold text-lg rounded-xl shadow-sm hover:bg-secondary/80 hover:scale-105 transition-all active:scale-95 text-center"
+            >
+              FAQ
             </Link>
           </div>
         </div>
 
         {/* Feature Teasers */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-12 text-left">
-          <div className="p-6 rounded-2xl bg-card border shadow-sm">
-            <h3 className="text-lg font-bold text-foreground mb-2">Effortless Route Logging</h3>
-            <p className="text-muted-foreground text-sm">Easily record and sync the exact transit journeys your team has taken.</p>
+          <div className="p-6 rounded-2xl bg-card border shadow-sm flex flex-col gap-3">
+            <Trophy className="w-8 h-8 text-primary" />
+            <h3 className="text-lg font-bold text-foreground">Live Race Hub & Dynamic Standings</h3>
+            <p className="text-muted-foreground text-sm leading-relaxed">Turn your journey into a high-stakes competition. Gather your friends, sync your public transport logs, and track overall leaderboards in real time. Teams plot their own open paths across Europe, battling to clear checkpoints fastest and cheapest while unlocking rival data only when a leg is completed by all to maintain the competitive "Fog of War".</p>
           </div>
-          <div className="p-6 rounded-2xl bg-card border shadow-sm">
-            <h3 className="text-lg font-bold text-foreground mb-2">Automated Expenses</h3>
-            <p className="text-muted-foreground text-sm">Log receipts dynamically converted via the Frankfurter exchange API.</p>
+          <div className="p-6 rounded-2xl bg-card border shadow-sm flex flex-col gap-3">
+            <Sparkles className="w-8 h-8 text-primary" />
+            <h3 className="text-lg font-bold text-foreground">Autonomous AI Judging</h3>
+            <p className="text-muted-foreground text-sm leading-relaxed">Completely eliminate biased arguments over who captured the best day. Our built-in AI judging engine aggregates global constraints, custom trip themes, and team captions to score creative daily photo submissions out of 10. Organisers get instant, balanced point distribution and written critiques saved automatically to the live dashboard.</p>
           </div>
-          <div className="p-6 rounded-2xl bg-card border shadow-sm">
-            <h3 className="text-lg font-bold text-foreground mb-2">Offline Resilience</h3>
-            <p className="text-muted-foreground text-sm">Progressive Web App built to function perfectly without connectivity on trains.</p>
+          <div className="p-6 rounded-2xl bg-card border shadow-sm flex flex-col gap-3">
+            <ShieldCheck className="w-8 h-8 text-primary" />
+            <h3 className="text-lg font-bold text-foreground">100% Free & Ad-Free</h3>
+            <p className="text-muted-foreground text-sm leading-relaxed">We believe a competitive adventure shouldn't be interrupted by banner ads or strict countdown timers. Enjoy a generous free tier that gives your teams access to every single feature—including AI receipt scanning, live tracking, and offline logging—completely uninhibited. Upgrading to a premium license simply unlocks unlimited uploads once your trip crosses standard fair-use quota limits.</p>
           </div>
         </div>
 
       </div>
 
+      {/* Footer */}
+      <footer className="mt-20 text-center text-sm text-muted-foreground animate-in fade-in duration-1000 delay-300">
+        <p>© 2026 EuroRace. All rights reserved.</p>
+        <div className="flex items-center justify-center gap-4 mt-2">
+          <Link href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
+          <span>•</span>
+          <Link href="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>
+          <span>•</span>
+          <Link href="/contact" className="hover:text-primary transition-colors">Contact Us</Link>
+        </div>
+      </footer>
+
       {/* Installation Modal Overlay */}
       {installOS && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-background/80 backdrop-blur-sm animate-in fade-in duration-300">
           <div className="bg-card border shadow-2xl rounded-2xl max-w-lg w-full p-8 relative animate-in zoom-in-95 duration-300">
-            
-            <button 
+
+            <button
               onClick={() => setInstallOS(null)}
               className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-muted text-muted-foreground hover:bg-destructive hover:text-destructive-foreground transition-colors"
             >
@@ -111,7 +133,7 @@ export default function Home() {
 
             {installOS === "ios" ? (
               <ol className="list-decimal pl-5 space-y-4 text-foreground text-left">
-                <li>Open <strong>Safari</strong> and navigate to <a href="https://eurorace.app" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">eurorace.app</a>. <br/><span className="text-sm text-muted-foreground">(Note: This must be done in Safari, not Chrome.)</span></li>
+                <li>Open <strong>Safari</strong> and navigate to <a href="https://eurorace.app" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">eurorace.app</a>. <br /><span className="text-sm text-muted-foreground">(Note: This must be done in Safari, not Chrome.)</span></li>
                 <li>Tap the <strong>Share</strong> icon at the bottom of the screen (the square with an arrow pointing up).</li>
                 <li>Scroll down the share menu and tap <strong>"Add to Home Screen"</strong>.</li>
                 <li>Confirm the app name and tap <strong>"Add"</strong> in the top right corner.</li>
@@ -125,7 +147,7 @@ export default function Home() {
               </ol>
             )}
 
-            <button 
+            <button
               onClick={() => setInstallOS(null)}
               className="w-full mt-8 py-3 bg-secondary text-secondary-foreground font-semibold rounded-xl hover:bg-secondary/80 transition-colors"
             >
